@@ -13,6 +13,13 @@ angular.module('myApp.controllers', []).
       $scope.time = data.time;
     });
   }).
+  controller('LoginCtrl', function($scope){
+
+    $scope.login = function() {
+      // $scope.msg = 'clicked';
+      alert($scope.username + " " + $scope.password );
+    }
+  }).
   controller('MyCtrl2', function ($scope) {
     // write Ctrl here
   });

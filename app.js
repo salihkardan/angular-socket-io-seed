@@ -8,10 +8,21 @@ var express = require('express'),
   api = require('./routes/api'),
   http = require('http'),
   path = require('path');
+  https = require('https');
+  fs = require('fs');
+
+// var options = {
+//   key: fs.readFileSync('/home/salih/Desktop/angular-socket-io-seed/ssl/localhost.key'),
+//   cert: fs.readFileSync('/home/salih/Desktop/angular-socket-io-seed/ssl/localhost.key.crt'),
+//   passphrase: 'test'
+// };
 
 var app = module.exports = express();
 var server = require('http').createServer(app);
+// var server = https.createServer(options, app);
 var io = require('socket.io').listen(server);
+
+
 
 /**
  * Configuration

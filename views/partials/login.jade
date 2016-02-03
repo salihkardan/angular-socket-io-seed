@@ -1,0 +1,13 @@
+.container 
+ .col-center-block 
+  .col-sm-6
+    form
+      | First name:
+      br
+      input(type='text', class="form-control", name='firstname', ng-model="username")
+      br
+      |   Last name:
+      br
+      input(type='password', class="form-control", name='password', ng-model="password")
+      br
+      button.btn.btn-primary(type='button', aria-label='Left Align', ng-click='login()') Login
